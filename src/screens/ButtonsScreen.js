@@ -1,13 +1,13 @@
 import React from "react";
-import PrimaryButton from "../components/Button";
-import NavBar from "../components/NavBar";
+import PrimaryButton, { SecondaryButton } from "../components/Button";
 
 export default function ButtonsScreen() {
   return (
     <React.Fragment>
-      <NavBar />
       <h1>Buttons</h1>
       <PrimaryButton>Primary Button</PrimaryButton>
+
+      <SecondaryButton>Secondary Button</SecondaryButton>
     </React.Fragment>
   );
 }
