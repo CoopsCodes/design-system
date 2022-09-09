@@ -1,26 +1,26 @@
-export const Primary = {
+export const primary = {
   blue: "#00A3FF",
 };
-export const Text = {
+export const text = {
   natural: "#FAFAFA",
   inverted: "#05001F",
 };
-export const Success = {
+export const success = {
   100: "#82FF96",
   200: "#44E35E",
   300: "#0BC629",
 };
-export const Warning = {
+export const warning = {
   100: "#FFF177",
   200: "#E8D52F",
   300: "#C6B30B",
 };
-export const Error = {
+export const error = {
   100: "#FF7E7E",
   200: "#D42525",
   300: "#9A1313",
 };
-export const Neutral = {
+export const neutral = {
   100: "#F5F5F5",
   200: "#E4E5E5",
   300: "#D8DADB",

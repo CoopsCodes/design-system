@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Primary } from "../utils/Colours";
+import { primary } from "../utils/Colours";
 
 const AltWhite = "white";
 
@@ -8,7 +8,7 @@ const Button = styled.button`
   border-style: none;
   color: black;
   padding: 0;
-  background-color: ${Primary.blue};
+  background-color: ${primary.blue};
   min-width: 220px;
   cursor: pointer;
   user-select: none;
