@@ -1,15 +1,14 @@
 import styled from "styled-components";
+import { Primary } from "../utils/Colours";
 
-const PrimaryBlue = "#00a3ff";
 const AltWhite = "white";
 
 const Button = styled.button`
   font-size: 1rem;
   border-style: none;
-
   color: black;
   padding: 0;
-  background-color: ${PrimaryBlue};
+  background-color: ${Primary.blue};
   min-width: 220px;
   cursor: pointer;
   user-select: none;
