@@ -1,4 +1,4 @@
-import { text, blue, fonts } from "../utils";
+import { text, blue } from "../utils";
 
 export const lightTheme = {
   primaryColour: blue[300],
@@ -6,7 +6,6 @@ export const lightTheme = {
   primaryCoverActive: blue[100],
   textColour: text.natural,
   textColourInverted: text.inverted,
-  //   primaryFont: fonts.main,
   border: text.natural,
   borderInverted: text.inverted,
 };
