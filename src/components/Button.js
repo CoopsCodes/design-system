@@ -1,14 +1,13 @@
 import styled from "styled-components";
-import { primary } from "../utils/Colours";
-
-const AltWhite = "white";
+import { lightTheme, typeScale, fonts } from "../utils";
 
 const Button = styled.button`
-  font-size: 1rem;
+  font-size: ${typeScale.p};
+  font-family: ${fonts.main};
   border-style: none;
   color: black;
   padding: 0;
-  background-color: ${primary.blue};
+  background-color: ${lightTheme.primaryColour};
   min-width: 220px;
   cursor: pointer;
   user-select: none;
@@ -24,7 +23,7 @@ const Span = styled.span`
   backdrop-filter: blur(2px);
   min-width: 220px;
   height: 50px;
-  margin-top: -1px;
+  //   margin-top: -1px;
   padding: 0;
   transform: translate(0px, 0px);
   transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
@@ -43,7 +42,7 @@ const Span = styled.span`
 `;
 
 const SecondaryButtonStyles = styled(Button)`
-  background-color: ${AltWhite};
+  background-color: ${lightTheme.textColour};
 `;
 
 export function SecondaryButton({ children, ...props }) {

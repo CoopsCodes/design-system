@@ -1,5 +1,5 @@
-export const primary = {
-  blue: "#00A3FF",
+export const blue = {
+  300: "#00A3FF",
 };
 export const text = {
   natural: "#FAFAFA",
