@@ -1,4 +1,4 @@
-export default function Dashboard() {
+export function Dashboard() {
   return (
     <div>
       <h1>Hello World</h1>

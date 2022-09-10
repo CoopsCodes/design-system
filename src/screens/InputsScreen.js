@@ -1,7 +1,7 @@
 import React from "react";
-import Input from "../components/Input";
+import { Input } from "../components";
 
-export default function InputsScreen() {
+export function InputsScreen() {
   return (
     <React.Fragment>
       <h1>Inputs</h1>

@@ -1,3 +1,3 @@
-export default function Input() {
+export function Input() {
   return <p>Inputs coming soon</p>;
 }

@@ -1,7 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import ButtonsScreen from "../screens/ButtonsScreen";
-import Dashboard from "../screens/Dashboard";
-import InputsScreen from "../screens/InputsScreen";
+import { ButtonsScreen, Dashboard, InputsScreen } from "../screens";
 
 export default function AppRoutes() {
   return (

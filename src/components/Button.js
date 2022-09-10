@@ -12,20 +12,29 @@ const Button = styled.button`
   cursor: pointer;
   user-select: none;
   transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  &:focus-visible {
+    outline: 2px inset ${lightTheme.primaryColour};
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    background: grey;
+    cursor: not-allowed;
+    transition: transform 0ms cubic-bezier(0, 0, 0, 0);
+    transform: translate(0);
+  }
 `;
 
 const Span = styled.span`
-  border: solid;
-  border-color: black;
+  border: 3px solid black;
+
   display: flex;
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(2px);
   min-width: 220px;
   height: 50px;
-  //   margin-top: -1px;
   padding: 0;
-  transform: translate(0px, 0px);
   transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
   &:focus-visible {
     outline: revert;
@@ -38,6 +47,11 @@ const Span = styled.span`
   &:active {
     transform: translate(0px, 0px);
     transition: transform 50ms;
+  }
+
+  &:disabled {
+    transition: transform 0ms cubic-bezier(0, 0, 0, 0);
+    transform: translate(0);
   }
 `;
 
@@ -53,7 +67,7 @@ export function SecondaryButton({ children, ...props }) {
   );
 }
 
-export default function PrimaryButton({ children, ...props }) {
+export function PrimaryButton({ children, ...props }) {
   return (
     <Button {...props}>
       <Span {...props}>{children}</Span>
