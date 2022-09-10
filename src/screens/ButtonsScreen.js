@@ -10,6 +10,10 @@ export function ButtonsScreen() {
       <SecondaryButton>Secondary Button</SecondaryButton>
 
       <PrimaryButton disabled>Disabled Button</PrimaryButton>
+
+      <PrimaryButton modifiers={"small"}>Smaller Font Button</PrimaryButton>
+
+      <PrimaryButton modifiers={"large"}>Larger Font Button</PrimaryButton>
     </React.Fragment>
   );
 }

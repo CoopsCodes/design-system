@@ -1,5 +1,15 @@
 import styled from "styled-components";
 import { lightTheme, typeScale, fonts } from "../utils";
+import { applyStyleModifiers } from "styled-components-modifiers";
+
+const BUTTON_MODIFIERS = {
+  small: () => `
+	font-size: ${typeScale.helper};
+  `,
+  large: () => `
+  	font-size: ${typeScale.h6};
+  `,
+};
 
 const Button = styled.button`
   font-size: ${typeScale.p};
@@ -23,11 +33,11 @@ const Button = styled.button`
     transition: transform 0ms cubic-bezier(0, 0, 0, 0);
     transform: translate(0);
   }
+  ${applyStyleModifiers(BUTTON_MODIFIERS)}
 `;
 
 const Span = styled.span`
   border: 3px solid black;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,6 +63,8 @@ const Span = styled.span`
     transition: transform 0ms cubic-bezier(0, 0, 0, 0);
     transform: translate(0);
   }
+
+  ${applyStyleModifiers(BUTTON_MODIFIERS)}
 `;
 
 const SecondaryButtonStyles = styled(Button)`
