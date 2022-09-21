@@ -73,3 +73,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 styled-components
 styled-components-modifiers
+
+# Deployment
+
+Hosted on Vercel at www.design-system.fun
