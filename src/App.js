@@ -1,15 +1,14 @@
 import React from "react";
-import { NavBar } from "./components";
 import AppRoutes from "./routes/Routes";
+import { AppLayout } from "./utils/AppLayout";
 import { GlobalStyles } from "./utils";
 
 function App() {
   return (
-    <React.Fragment>
-      <NavBar />
+    <AppLayout>
       <AppRoutes />
       <GlobalStyles />
-    </React.Fragment>
+    </AppLayout>
   );
 }
 
