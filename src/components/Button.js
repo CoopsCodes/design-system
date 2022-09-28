@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { lightTheme, typeScale, fonts } from "../utils";
+import { typeScale, fonts } from "../utils";
 import { applyStyleModifiers } from "styled-components-modifiers";
 
 const BUTTON_MODIFIERS = {
@@ -9,6 +9,19 @@ const BUTTON_MODIFIERS = {
   large: () => `
   	font-size: ${typeScale.h6};
   `,
+  warning: ({ theme }) => `
+    	background-color: ${theme.status.warningColour};
+    `,
+  error: ({ theme }) => `
+    	background-color: ${theme.status.errorColour};
+    `,
+  success: ({ theme }) => `
+    	background-color: ${theme.status.successColour};
+    `,
+  inverted: ({ theme }) => `
+  		background-color: ${theme.textColour};
+		color: ${theme.textColourInverted};
+	`,
 };
 
 const Button = styled.button`
@@ -17,13 +30,13 @@ const Button = styled.button`
   border-style: none;
   color: black;
   padding: 0;
-  background-color: ${lightTheme.primaryColour};
-  min-width: 220px;
+  background-color: ${(props) => props.theme.primaryColour};
+  width: 220px;
   cursor: pointer;
   user-select: none;
   transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
   &:focus-visible {
-    outline: 2px inset ${lightTheme.primaryColour};
+    outline: 2px inset ${(props) => props.theme.primaryColour};
     outline-offset: 2px;
   }
 
@@ -68,7 +81,8 @@ const Span = styled.span`
 `;
 
 const SecondaryButtonStyles = styled(Button)`
-  background-color: ${lightTheme.textColour};
+  background-color: ${(props) => props.theme.secondaryButtonMain}
+    ${applyStyleModifiers(BUTTON_MODIFIERS)};
 `;
 
 export function SecondaryButton({ children, ...props }) {

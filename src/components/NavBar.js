@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useTheme } from "../context/useTheme";
 import { NavLink } from "react-router-dom";
 
 const pages = [
@@ -72,6 +73,8 @@ const Socials = styled.div`
 `;
 
 export function NavBar() {
+  const { themeToggle } = useTheme();
+
   return (
     <NavbarContainer>
       <UL>
@@ -86,6 +89,7 @@ export function NavBar() {
             );
           })}
         </PageLinks>
+        <button onClick={themeToggle}>toggle theme</button>
         <Socials>
           <LI>
             <a
