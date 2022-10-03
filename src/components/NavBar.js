@@ -1,21 +1,7 @@
 import styled from "styled-components";
 import { useTheme } from "../context/useTheme";
 import { NavLink } from "react-router-dom";
-
-const pages = [
-  {
-    name: "Home",
-    path: "/",
-  },
-  {
-    name: "Buttons",
-    path: "/buttons",
-  },
-  {
-    name: "Inputs",
-    path: "/inputs",
-  },
-];
+import { pages } from "../utils";
 
 const NavbarContainer = styled.nav`
   width: 150px;
@@ -79,9 +65,9 @@ export function NavBar() {
     <NavbarContainer>
       <UL>
         <PageLinks>
-          {pages.map((page, index) => {
+          {pages.map((page) => {
             return (
-              <LI key={index}>
+              <LI key={page.key}>
                 <StyledNavLink to={page.path} active="active">
                   {page.name}
                 </StyledNavLink>

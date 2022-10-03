@@ -1,26 +1,13 @@
 import { Route, Routes } from "react-router-dom";
-import { ButtonsScreen, Dashboard, InputsScreen } from "../screens";
-
-const pages = [
-  {
-    path: "/",
-    component: <Dashboard />,
-  },
-  {
-    path: "/buttons",
-    component: <ButtonsScreen />,
-  },
-  {
-    path: "/inputs",
-    component: <InputsScreen />,
-  },
-];
+import { pages } from "../utils";
 
 export default function AppRoutes() {
   return (
     <Routes>
-      {pages.map((page, index) => {
-        return <Route key={index} path={page.path} element={page.component} />;
+      {pages.map((page) => {
+        return (
+          <Route key={page.key} path={page.path} element={page.component} />
+        );
       })}
     </Routes>
   );
