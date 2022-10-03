@@ -28,7 +28,8 @@ const StyledNavLink = styled(NavLink)`
 const UL = styled.ul`
   margin: 0;
   padding: 0;
-  width: 100%;
+  //   width: 100%;
+  width: 150px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

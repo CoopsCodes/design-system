@@ -1,6 +1,6 @@
 import { text, blue, warning, error, success } from "../utils";
 
-export const lightTheme = {
+export const darkTheme = {
   background: text.inverted,
   secondaryButtonMain: text.natural,
   primaryColour: blue[300],
@@ -24,7 +24,7 @@ export const lightTheme = {
 };
 
 // create your dark theme colours here to match the light variables to your light theme
-export const darkTheme = {
+export const lightTheme = {
   background: text.natural,
   secondaryButtonMain: text.natural,
   primaryColour: blue[300],

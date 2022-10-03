@@ -13,7 +13,7 @@ function App() {
   };
 
   return (
-    <ThemeProvider theme={useDarkTheme ? darkTheme : lightTheme}>
+    <ThemeProvider theme={useDarkTheme === true ? darkTheme : lightTheme}>
       <AppThemeContext.Provider
         value={{
           useDarkTheme,
